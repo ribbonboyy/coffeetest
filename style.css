@@ -7,14 +7,14 @@
 
 body, html {
     font-family: 'Montserrat', sans-serif;
-    background: #000a1a; /* Solid dark background */
+    background: #0a0d14; /* Solid dark color for fast rendering */
     height: 100%;
     color: white;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-/* Animated Background */
+/* Subtle Animated Background */
 body::before {
     content: '';
     position: fixed;
@@ -23,36 +23,36 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle, #002233, #000a1a); /* Subtle gradient */
-    animation: bgAnimation 12s infinite alternate; /* Slower and simpler animation */
+    background: linear-gradient(120deg, #001f3f, #0a0d14);
+    animation: bgPulse 6s infinite alternate; /* Simplified, GPU-friendly animation */
 }
 
-@keyframes bgAnimation {
+@keyframes bgPulse {
     from {
-        background-position: 50% 50%;
+        filter: brightness(1);
     }
     to {
-        background-position: 55% 55%;
+        filter: brightness(1.1);
     }
 }
 
 /* Header Styling */
 .header {
     text-align: center;
-    padding: 2rem 1rem;
-    background: rgba(20, 20, 20, 0.9); /* Darker and simpler backdrop */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+    padding: 1.5rem 1rem;
+    background: #12161f; /* Static solid background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Simplified shadow */
+    border-radius: 10px;
     margin: 2rem auto;
     width: 90%;
     max-width: 1200px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.3s ease; /* Focused transition */
 }
 
 .header h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: #00eaff;
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Subtle text glow */
 }
 
 .header p {
@@ -72,10 +72,10 @@ body::before {
 .nav-links a {
     text-decoration: none;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
     padding: 0.5rem 1rem;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease; /* Simple transitions */
 }
 
 .nav-links .join-button {
@@ -83,13 +83,13 @@ body::before {
     color: #ffffff;
     padding: 0.5rem 1rem;
     font-weight: bold;
-    border-radius: 10px;
-    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
 }
 
-.nav-links .join-button:hover {
+.nav-links a:hover {
     background: #00eaff;
     color: #001f3f;
+    transform: scale(1.05); /* Lightweight scale effect */
 }
 
 /* Sections Styling */
@@ -97,84 +97,56 @@ body::before {
     margin: 2rem auto;
     width: 90%;
     max-width: 1200px;
-    background: rgba(30, 30, 30, 0.9); /* Solid dark background */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
+    background: #181d29; /* Static solid color for simplicity */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
     padding: 2rem;
     text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
 .section h2 {
     font-size: 2.2rem;
     color: #00eaff;
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .section p {
     margin-top: 1rem;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.section:hover {
+    transform: translateY(-3px); /* Simple hover effect */
 }
 
 /* Reviews Section */
 .reviews-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Fixed grid layout */
     gap: 1rem;
     margin-top: 2rem;
 }
 
 .review {
-    background: rgba(20, 20, 20, 0.9);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
+    background: #1c2130; /* Solid color */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Simplified shadow */
+    border-radius: 10px;
     padding: 1.5rem;
     text-align: left;
-    color: rgba(255, 255, 255, 0.9);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .review:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.review-text {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.review-author {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Buttons */
-.join-button, .vote-button, .expand-rules-button, .donate-button {
-    display: inline-block;
-    background: #004466;
-    color: #ffffff;
-    padding: 0.6rem 1.3rem;
-    font-weight: bold;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.join-button:hover, .vote-button:hover, .expand-rules-button:hover, .donate-button:hover {
-    background: #00eaff;
-    color: #001f3f;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background: rgba(10, 10, 10, 0.9);
+    background: #0a0d14;
     color: #00eaff;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
-
