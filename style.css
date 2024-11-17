@@ -7,7 +7,7 @@
 
 body, html {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(120deg, #00faff, #001f3f);
+    background: linear-gradient(120deg, #001f3f, #000a1a); /* Darker background gradient */
     height: 100%;
     color: white;
     overflow-x: hidden;
@@ -23,9 +23,9 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle, #00faff, #001f3f);
+    background: radial-gradient(circle, #001f3f, #000a1a);
     background-size: 200%;
-    animation: bgAnimation 8s infinite alternate;
+    animation: bgAnimation 10s infinite alternate; /* Slightly slower animation */
 }
 
 /* Background Animation */
@@ -42,38 +42,33 @@ body::before {
 .header {
     text-align: center;
     padding: 2rem 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.08); /* Slightly darker backdrop */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); /* Deeper shadow */
     border-radius: 15px;
     margin: 2rem auto;
     width: 90%;
     max-width: 1200px;
-    backdrop-filter: blur(15px);
-    transition: transform 0.5s ease;
+    backdrop-filter: blur(10px);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
 .header h1 {
     font-size: 3rem;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    color: #00faff;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
+    color: #00eaff; /* Slightly dimmed neon blue */
 }
 
 .header p {
     font-size: 1.2rem;
     margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.8); /* Subtle text color */
 }
 
+/* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Align items in the center vertically */
+    align-items: center;
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -81,76 +76,75 @@ body::before {
 .nav-links a {
     text-decoration: none;
     font-weight: 600;
-    color: white;
+    color: rgba(255, 255, 255, 0.9); /* Slightly toned down white */
     padding: 0.5rem 1rem;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .nav-links .join-button {
-    background: #00faff; /* Keep distinct styling for the button */
-    color: #001f3f;
+    background: #005f8f; /* Darker button background */
+    color: #ffffff;
     padding: 0.5rem 1rem;
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
-    transition: background 0.3s ease, color 0.3s ease;
-    margin: 0; /* Remove any extra margin pushing it out of line */
+    transition: background 0.4s ease, color 0.4s ease;
+    margin: 0;
 }
 
 .nav-links .join-button:hover {
-    background: white;
-    color: #00faff;
+    background: #00eaff;
+    color: #001f3f;
 }
-
 
 /* Sections Styling */
 .section {
     margin: 2rem auto;
     width: 90%;
     max-width: 1200px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.08); /* Slightly darker background */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Deeper shadow */
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
-    backdrop-filter: blur(15px);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    backdrop-filter: blur(12px);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
 .section h2 {
     font-size: 2.5rem;
-    color: #00faff;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    color: #00eaff;
+    text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.6);
 }
 
 .section p {
     margin-top: 1rem;
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85); /* Slightly brighter text */
 }
 
 /* Reviews Section */
 .reviews-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .review {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.12); /* Darker card background */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     padding: 1.5rem;
     text-align: left;
     color: rgba(255, 255, 255, 0.9);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .review:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
 .review-text {
@@ -167,44 +161,33 @@ body::before {
 /* Hover Effects */
 .section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); /* Enhanced hover effect */
 }
 
 /* Buttons */
 .join-button, .vote-button, .expand-rules-button, .donate-button {
     display: inline-block;
-    background: #00faff;
-    color: #001f3f;
+    background: #004466; /* Darker button color */
+    color: #ffffff;
     padding: 0.7rem 1.5rem;
     font-weight: bold;
     border-radius: 20px;
     margin-top: 1rem;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
 .join-button:hover, .vote-button:hover, .expand-rules-button:hover, .donate-button:hover {
-    background: white;
-    color: #00faff;
-}
-
-/* Poll Section */
-.poll-options {
-    margin: 1rem 0;
-}
-
-.poll-options label {
-    display: block;
-    margin: 0.5rem 0;
-    font-size: 1rem;
+    background: #00eaff; /* Bright highlight on hover */
+    color: #001f3f;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background: rgba(0, 31, 63, 0.9);
-    color: #00faff;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 15, 30, 0.95); /* Darker footer background */
+    color: #00eaff;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.6);
 }
