@@ -7,7 +7,7 @@
 
 body, html {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(120deg, #001f3f, #000a1a); /* Darker background gradient */
+    background: #000a1a; /* Solid dark background */
     height: 100%;
     color: white;
     overflow-x: hidden;
@@ -23,18 +23,16 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle, #001f3f, #000a1a);
-    background-size: 200%;
-    animation: bgAnimation 10s infinite alternate; /* Slightly slower animation */
+    background: radial-gradient(circle, #002233, #000a1a); /* Subtle gradient */
+    animation: bgAnimation 12s infinite alternate; /* Slower and simpler animation */
 }
 
-/* Background Animation */
 @keyframes bgAnimation {
     from {
-        background-position: 0% 0%;
+        background-position: 50% 50%;
     }
     to {
-        background-position: 100% 100%;
+        background-position: 55% 55%;
     }
 }
 
@@ -42,55 +40,51 @@ body::before {
 .header {
     text-align: center;
     padding: 2rem 1rem;
-    background: rgba(255, 255, 255, 0.08); /* Slightly darker backdrop */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+    background: rgba(20, 20, 20, 0.9); /* Darker and simpler backdrop */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     margin: 2rem auto;
     width: 90%;
     max-width: 1200px;
-    backdrop-filter: blur(10px);
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .header h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
-    color: #00eaff; /* Slightly dimmed neon blue */
+    font-size: 2.8rem;
+    color: #00eaff;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .header p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 0.5rem;
-    color: rgba(255, 255, 255, 0.8); /* Subtle text color */
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 1rem;
 }
 
 .nav-links a {
     text-decoration: none;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9); /* Slightly toned down white */
+    color: rgba(255, 255, 255, 0.9);
     padding: 0.5rem 1rem;
     border-radius: 10px;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-links .join-button {
-    background: #005f8f; /* Darker button background */
+    background: #005f8f;
     color: #ffffff;
     padding: 0.5rem 1rem;
     font-weight: bold;
-    text-decoration: none;
     border-radius: 10px;
-    transition: background 0.4s ease, color 0.4s ease;
-    margin: 0;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .nav-links .join-button:hover {
@@ -103,52 +97,51 @@ body::before {
     margin: 2rem auto;
     width: 90%;
     max-width: 1200px;
-    background: rgba(255, 255, 255, 0.08); /* Slightly darker background */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+    background: rgba(30, 30, 30, 0.9); /* Solid dark background */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
-    backdrop-filter: blur(12px);
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .section h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: #00eaff;
-    text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 .section p {
     margin-top: 1rem;
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.85); /* Slightly brighter text */
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* Reviews Section */
 .reviews-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 2rem;
 }
 
 .review {
-    background: rgba(255, 255, 255, 0.12); /* Darker card background */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    background: rgba(20, 20, 20, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     padding: 1.5rem;
     text-align: left;
     color: rgba(255, 255, 255, 0.9);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .review:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .review-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -158,28 +151,21 @@ body::before {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Hover Effects */
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); /* Enhanced hover effect */
-}
-
 /* Buttons */
 .join-button, .vote-button, .expand-rules-button, .donate-button {
     display: inline-block;
-    background: #004466; /* Darker button color */
+    background: #004466;
     color: #ffffff;
-    padding: 0.7rem 1.5rem;
+    padding: 0.6rem 1.3rem;
     font-weight: bold;
     border-radius: 20px;
-    margin-top: 1rem;
     text-decoration: none;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .join-button:hover, .vote-button:hover, .expand-rules-button:hover, .donate-button:hover {
-    background: #00eaff; /* Bright highlight on hover */
+    background: #00eaff;
     color: #001f3f;
 }
 
@@ -187,7 +173,8 @@ body::before {
 footer {
     text-align: center;
     padding: 1rem;
-    background: rgba(0, 15, 30, 0.95); /* Darker footer background */
+    background: rgba(10, 10, 10, 0.9);
     color: #00eaff;
-    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
 }
+
